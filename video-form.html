@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8"/>
+
+    <title>アップデート</title>
+</head>
+<body>
+<h1>Video Element</h1>
+<input type="file" onchange="onChange(this)"/>
+<div id="video-store"></div>
+
+<script>
+  alert('script')
+
+  function onChange (inputElement) {
+    alert('onChange')
+
+    let video = document.createElement('video')
+    let fileUrl = URL.createObjectURL(inputElement.files[0])
+    video.setAttribute('src', fileUrl)
+    video.setAttribute('id', 'this-is-video')
+    video.setAttribute('muted', '')
+    video.setAttribute('playsinline', '')
+
+    document.getElementById('video-store').appendChild(video)
+
+    inputElement.ondurationchange = function () {
+      alert("ondurationchange")
+    }
+    inputElement.loadeddata = function () {
+      alert("loadeddata")
+    }
+  }
+</script>
+</body>
+</html>
+
