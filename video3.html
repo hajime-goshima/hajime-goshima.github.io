@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+
+<title>「Mac Safariでvideoの自動再生ができない」のデモページ3 | cly7796.net</title>
+<meta name="keywords" content="CSS,Safari,video,autoplay,効かない,Mac,ミュート,muted,Chrome,Media Engagement Index,デモページ3" />
+<meta name="description" content="「Mac Safariでvideoの自動再生ができない」のデモページ3です。" />
+
+<link rel="stylesheet" href="./sample.css" />
+
+<script src="../analytics.js"></script>
+</head>
+<body>
+
+no inline
+autoplay muted
+with event
+
+<video id="my-video" src="movie.mp4" autoplay muted></video>
+
+<script>
+alert("script");
+document.getElementById("my-video").addEventListener("loadeddata", function() {
+  alert("loadeddata");
+})
+</script>
+
+<div class="back"><a href="http://cly7796.net/wp/css/safari-can-not-play-video-automatically/">「Mac Safariでvideoの自動再生ができない」の記事ページへ戻る</a></div>
+</body>
+</html>
